@@ -34,4 +34,4 @@ The goal was to create a space that combines reliable information, empathy, and 
 💻 **Technologies:** HTML5, CSS3  
 🧠 **Concepts:** Semantic web structure, responsive design, accessibility, user experience  
 📱 **Responsive for:** Mobile, tablet, desktop  
-🎓 **Academic Context:** Final client-side web development assignment
+🎓 Academic Context: Mid-course client-side web development assignment
