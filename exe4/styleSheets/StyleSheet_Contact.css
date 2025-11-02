@@ -1,0 +1,109 @@
+﻿main {
+    grid-area: main;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: auto 1fr;
+    gap: 15px;
+    margin: 20px;
+    grid-template-areas:
+        "section1 section1 section1"
+        "section2 section4 section3";
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: larger;
+}
+
+section > h3 {
+    margin: 0px;
+}
+
+section > h2 {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+section:first-child {
+    grid-area: section1;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:nth-child(2) {
+    grid-area: section2;
+    height: 400px;
+}
+
+section:nth-child(3) {
+    grid-area: section3;
+    height: 400px;
+}
+
+section:last-child {
+    grid-area: section4;
+    height: 400px;
+}
+
+/*עיצוב לטאבלט*/
+@media screen and (max-width: 960px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "section1"
+            "section2"
+            "section3"
+            "section4";
+        grid-auto-rows: auto;
+        gap: 15px;
+    }
+
+    section {
+        height: 130px;
+        font-size: large;
+    }
+
+    section:first-child {
+        grid-area: section1;
+        height: auto;
+    }
+
+    section:nth-child(2) {
+        grid-area: section2;
+        height: auto;
+    }
+
+    section:nth-child(3) {
+        grid-area: section3;
+        height: auto;
+    }
+
+    section:last-child {
+        grid-area: section4;
+        height: auto;
+    }
+}
+
+/*עיצוב לטלפון*/
+@media screen and (max-width:480px) {
+    main {
+        position: static;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+    }
+
+    section {
+        font-size: medium;
+    }
+}
